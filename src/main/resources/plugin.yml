@@ -1,0 +1,6 @@
+name: SnuckCash
+author: Snuck
+version: 1.0
+main: net.snuck.cash.Main
+commands:
+  cash:
