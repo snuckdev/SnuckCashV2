@@ -4,6 +4,8 @@ import net.snuck.cash.commands.CashCommand;
 import net.snuck.cash.database.IData;
 import net.snuck.cash.database.MySQL;
 import net.snuck.cash.database.SQLite;
+import net.snuck.cash.hooks.MvDWPlaceholderAPI;
+import net.snuck.cash.hooks.PlaceholderAPI;
 import net.snuck.cash.listener.PlayerJoinListener;
 import net.snuck.cash.listener.PlayerLeftListener;
 import net.snuck.cash.manager.DataManager;
@@ -35,6 +37,14 @@ public class Main extends JavaPlugin {
         registerListener(new PlayerJoinListener());
         registerListener(new PlayerLeftListener());
         saveTask();
+        if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null)  {
+            System.out.println("PlaceholderAPI encontrado");
+            new PlaceholderAPI().register();
+        }
+        if(Bukkit.getPluginManager().getPlugin("MVdWPlaceholderAPI") != null) {
+            System.out.println("MVdWPlaceholderAPI encontrado");
+            new MvDWPlaceholderAPI();
+        }
     }
 
     private void setupDatabase() {

@@ -25,6 +25,10 @@
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -45,6 +49,20 @@
             <artifactId>craftbukkit</artifactId>
             <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.clip.placeholderapi</groupId>
+            <artifactId>PlaceholderAPI</artifactId>
+            <version>2.10.4</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/PlaceholderAPI.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>be.maximvdw.placeholderapi</groupId>
+            <artifactId>MVdWPlaceholderAPI</artifactId>
+            <version>3.0.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/MVdWPlaceholderAPI.jar</systemPath>
         </dependency>
     </dependencies>
 
