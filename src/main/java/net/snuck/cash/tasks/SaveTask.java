@@ -8,7 +8,7 @@ public class SaveTask implements Runnable {
     public void run() {
         Main.getUsers().forEach((key, user) -> {
             user.save();
-            System.out.println("[DEBUG] [SNUCKCASH] AutoSave executado.");
         });
+        System.out.println("[SnuckCash] [DEBUG] AutoSave executado.");
     }
 }
