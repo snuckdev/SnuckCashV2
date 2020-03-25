@@ -3,6 +3,7 @@ package net.snuck.cash.hooks;
 import be.maximvdw.placeholderapi.PlaceholderAPI;
 import net.snuck.cash.Main;
 import net.snuck.cash.manager.DataManager;
+import net.snuck.cash.utils.Formatter;
 import org.bukkit.entity.Player;
 
 public class MvDWPlaceholderAPI {
@@ -16,7 +17,7 @@ public class MvDWPlaceholderAPI {
             Player p = event.getPlayer();
 
             if(DataManager.has(p.getUniqueId())) {
-                return String.valueOf(DataManager.get(p.getUniqueId()).getSaldo());
+                return Formatter.format(DataManager.get(p.getUniqueId()).getSaldo());
             }
 
             return "";

@@ -3,6 +3,7 @@ package net.snuck.cash.hooks;
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 import net.snuck.cash.manager.DataManager;
 import net.snuck.cash.objects.User;
+import net.snuck.cash.utils.Formatter;
 import org.bukkit.entity.Player;
 
 public class PlaceholderAPI extends PlaceholderExpansion {
@@ -17,7 +18,7 @@ public class PlaceholderAPI extends PlaceholderExpansion {
         if(user == null) return "";
 
         if(params.equals("cash")) {
-            return String.valueOf(user.getSaldo());
+            return Formatter.format(user.getSaldo());
         }
         return "";
     }
